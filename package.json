@@ -1,0 +1,26 @@
+{
+  "name": "article",
+  "version": "1.0.0",
+  "description": "some article",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "validate-commit-msg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iwouldliketobeapig/article.git"
+  },
+  "keywords": [
+    "article"
+  ],
+  "author": "dutao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iwouldliketobeapig/article/issues"
+  },
+  "homepage": "https://github.com/Iwouldliketobeapig/article#readme",
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
