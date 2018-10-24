@@ -1,5 +1,5 @@
 ---
-title: React and Vue组件间数据传递demo
+title: React和Vue组件间数据传递demo
 date: 2018-10-22
 tag: 
   - react
@@ -15,6 +15,7 @@ categories:
 1. 简单的向下传递参数
 
 ```jsx
+/* Parent */
 class App extends Component {
   render() {
     return (
@@ -25,6 +26,7 @@ class App extends Component {
   }
 }
 
+/* Child */
 class Child extends Component {
   render() {
     return <div>{this.props.msg}</div>;
@@ -36,6 +38,7 @@ class Child extends Component {
 2. 向更下一级传递参数
 
 ```jsx
+/* Child1 */
 class Child1 extends Component {
   render() {
     return (
@@ -48,6 +51,7 @@ class Child1 extends Component {
   }
 }
 
+/* Child1_Child1 */
 class Child1_Child1 extends Component {
   render() {
     return (
@@ -64,6 +68,7 @@ class Child1_Child1 extends Component {
 ### (二)子组件向父组件传递参数
 
 ```jsx
+/* Parent */
 class App extends Component {
   constructor() {
     super();
@@ -92,6 +97,7 @@ class App extends Component {
   }
 }
 
+/* Child1 */
 class Child1 extends Component {
   componentDidMount() {
     setTimeout(() => {
@@ -114,6 +120,7 @@ class Child1 extends Component {
 ### (三)兄弟组件传递参数
 
 ```jsx
+/* Parent */
 class App extends Component {
   constructor() {
     super();
@@ -145,6 +152,7 @@ class App extends Component {
   }
 }
 
+/* Child1 */
 class Child1 extends Component {
   componentDidMount() {
     setTimeout(() => {
@@ -162,6 +170,7 @@ class Child1 extends Component {
   }
 }
 
+/* Child2 */
 class Child2 extends Component {
   render() {
     return (
@@ -181,7 +190,7 @@ class Child2 extends Component {
 1. 简单的向下传递参数
 
 ```javascript
-/* parent */
+/* Parent */
 <div id="app">
   <Child msg='ni daye'/>
 </div>
