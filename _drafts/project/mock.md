@@ -10,7 +10,7 @@ categories:
 
 ## 目前项目中的mock分析
 ### 使用
-1. api中调用ajax方法时第二个参数传入true启用mock数据
+1. api中调用ajax方法时第二个参数传入true启用mock数据
 
 **列：**
 ```javascript
