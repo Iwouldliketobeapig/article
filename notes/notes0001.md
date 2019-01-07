@@ -8,3 +8,36 @@
 7. React
   * Switch: 渲染与该地址匹配的第一个子节点<Route>或者<Redirect>
   * exact: 如果为true,则只有在路径完全匹配loaction.pathname时才匹配
+8. 非覆盖式发布           --> study
+9. Service Worker       --> study
+10. 前端攻击
+  * xss -> html编码 标签过滤 **he**
+  * ifiame  -> sandbox
+    * allow-forms: 允许嵌入的浏览上下文可以提交表单
+    * allow-modals: 允许内嵌浏览环境打开模态窗口
+    * allow-orientation-lock: 允许内嵌浏览环境禁用屏幕朝向锁定
+    * allow-pointer-lock: 允许内嵌环境使用Pointer Lock Api
+    * allow-popus: 允许弹窗
+    * allow-popus-to-escape-sandbox: 允许沙箱打开新窗口，并且不强制要求系窗口设置沙箱标记
+    * allow-persentation: 允许嵌入者控制是否iframe启用一个展示会话
+    * allow-scripts: 允许嵌入的浏览上下文运行脚本
+    * allow-top-navigation: 嵌入的页面的上下文可以导航
+  * 点击攻击  -> x-Frame-Option(服务器配置)
+    * DENY: 表示该页面不允许在frame中展示
+    * SAMEORIGIN: 表示该页面可以在相同域名页面的frame中显示
+    * ALLOW-FROM uri: 表示该页面可以在指定来源frame中显示
+  * 错误的内容推断 -> X-Content-Type-Options
+    * 禁用客户端MIME类型嗅探行为
+  * 不安全的三方依赖包 -> nsp
+  * https陷阱 -> Strict-Transport-Security: max-age=<seconds>; includeSubDomains; preload
+  * 本地储存数据泄露 -> 本地不储存明干数据
+  * 静态资源完整性校验 -> 浏览器提供的SRI（Subresource Integrity）功能
+* 写一篇关于运算符的文章
+
+## react-router
+### examples
+1. component class
+2. /:{param}:  router params
+3. Redirect: redirect router
+4. Prompt: tip router
+5. 
