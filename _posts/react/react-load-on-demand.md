@@ -1,5 +1,5 @@
 ---
-title: React和Vue组件间数据传递demo
+title: webpack+react按需加载
 date: 2019-02-14
 tag: 
   - react
@@ -8,13 +8,12 @@ categories:
 ---
 ![](/imgs/react/theme/load.jpg)
 
-# webpack+react按需加载
-
 ## CommonJS与import()
 ### 方法一：CommonJS模块语法
 **利用require.ensure,require.ensure()是webpack特有的，已经被import()取代。**
 
 `方法`
+
 ```javascript
 require.ensure(
   dependencies: String[],
@@ -28,6 +27,7 @@ require.ensure(
 **ES2015 loader规范定义了import()方法，可以在运行时动态地加载ES2015模块**
 
 `方法`
+
 ```javascript
 import('Component').then()
 // or
@@ -35,6 +35,7 @@ await import('Component')
 ```
 
 `demo`
+
 ```jsx
 import React, { Component } from 'react';
 
@@ -62,6 +63,7 @@ export default App;
 ```
 ## react-router中使用按需加载
 ### 方法一：使用react.lazy
+
 ```jsx
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
@@ -83,6 +85,7 @@ const App = () => (
 ### 方法二：利用高阶组件
 
 * 写一个高阶组件用于动态加载组件
+
 ```jsx
 // async Component
 import React, { Component } from "react";
@@ -116,6 +119,7 @@ export default function asyncComponent(importComponent) {
 }
 ```
 * 引用并使用该高阶组件做按需加载
+
 ```jsx
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import asyncComponent from './asyncComponent';
