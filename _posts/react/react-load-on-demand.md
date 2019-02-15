@@ -139,3 +139,5 @@ const App = () => (
   </Router>
 );
 ```
+
+`以上两种方法都是react官方推荐`[code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)

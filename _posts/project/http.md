@@ -173,7 +173,7 @@ categories:
 | Expires | 实体不在有效，要从原始的源端再次获取此实体的日期和时间 |
 | Last-Modified | 这个实体最后一次被修改的日期和时间 |
 
-### 状态吗
+### 状态码
 
 *状态码为客户端提供一种理解事务处理结果的快捷方式*
 
@@ -252,4 +252,4 @@ categories:
 | 504 | Gateway Timeout | 与状态码408类似，只是这里的响应来自一个网关或代理，他们在等待另一服务器对其请求进行响应时超时了 |
 | 505 | HTTP Version Not Supported | 服务器收到的请求使用了它无法或不愿支持的协议版本，使用此状态码。有些服务器应用程序选择不支持协议的早早期版本 |
 
-[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/blob/master/source/_posts/project/http.md)
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/article/blob/master/_posts/project/http.md)
