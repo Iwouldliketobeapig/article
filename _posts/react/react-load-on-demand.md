@@ -30,7 +30,7 @@ require.ensure(
 
 ```javascript
 import('Component').then()
-// or
+// or 在 async中使用
 await import('Component')
 ```
 

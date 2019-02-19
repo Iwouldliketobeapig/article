@@ -42,7 +42,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 npm i --D validate-commit-msg
 ```
 **添加commit规则**
-1. 根目录添加[.vcmrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.vcmrc)文件，并添加规则，必须为JSON格式
+* 1.根目录添加[.vcmrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.vcmrc)文件，并添加规则，必须为JSON格式
 
 ```JSON
 {
@@ -61,7 +61,8 @@ npm i --D validate-commit-msg
   "autoFix": false
 }
 ```
-2. 添加到package.json中
+
+* 2.添加到package.json中
 
 ```package.json
 {
