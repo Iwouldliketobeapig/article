@@ -99,7 +99,7 @@ npm i --D husky
 // stylelint-processor-htm: 检查html中的<style>便签中的样式
 // stylelint-scss: scss语法检测
 // stylelint-webpack-plugin: webpack检查插件
-npm i stylelint stylelint-order stylelint-processor-html stylelint-scss stylelint-webpack-plugin --D
+npm i stylelint stylelint-order stylelint-processor-html stylelint-scss stylelint-webpack-plugin css-properties-sorting --D
 ```
 
 **在根目录添加[.stylelintrc](https://github.com/Iwouldliketobeapig/vue-app-optimization/blob/master/.stylelintrc)文件，添加规则和插件**
