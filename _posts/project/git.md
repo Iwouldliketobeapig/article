@@ -32,11 +32,17 @@ categories:
 14. `git push <origin(源名)> <name(分支名)>`: 向远程仓库推送更改资源
 15. `git push <origin(源名)> <name(分支名)> --force`: 强制更新远程仓库
   例： git push origin master
-16. `git stash`: 缓存所有更改
-17. `git stash pop`: 放出缓存且删除缓存记录
-18. `git merge <name(分支名)>`: 合并分支
+16. **stash**: 
+  `git stash`: 储存当前变更
+  `git stash list`: 查看储存列表
+  `git stash apply`: 恢复储存列表中的第一个储存
+  `git stash apply stash@{n}`: 恢复储存列表中的某个储存
+  `git stash drop stash@{n}`: 移除储存列表中的某个储存
+  `git stash pop`: 回复储存且删除储存记录
+  `git stash branch`: 建一个新分支来重新检验你储存的变更
+17. `git merge <name(分支名)>`: 合并分支
   例: git merge test
-19. `git rebase <name(分支名)>`: 合并分支
+18. `git rebase <name(分支名)>`: 合并分支
   例: git rebase test
   `merge与rebase的区别`
   1.merge不会保存merge分支的commit
@@ -44,10 +50,10 @@ categories:
     ① git add . => git commit -m 'fix: 一些信息'会保存一条commit信息
     ② git add . => git rebase --continue 不产生额外的附加信息，当需要处理多个commit冲突时，需要重复处理多次
   3.git pull 默认未git pull --merge,设置为git pull --rebase即按照rebase处理冲突
-20. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
-21. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
-22. `git log`: 查看commit信息
-23. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
+19. `git pull <origin(源)> <feature(远程分支名)>`: 从远程仓库分支拉取代码
+20. `git status`: 查看更改信息(包括本地已更改，及已经add但是没有commit的更改)
+21. `git log`: 查看commit信息
+22. `git reset [--soft |  --mixed | --hard | --merge | --keep ] [<commit>]`
   例: git reset --soft HEAD^
   **参数**
   `[--soft |  --mixed | --hard | --merge | --keep ]`
@@ -60,4 +66,4 @@ categories:
     ③ commit的SHA1: 可以通过git log查看
     <img src="/imgs/project/git/gitlog.png">
 
-[在github上编辑此页](https://github.com/Iwouldliketobeapig/hexo-dt/blob/master/source/_posts/project/git.md)
+[在github上编辑此页](https://github.com/Iwouldliketobeapig/article/blob/master/_posts/project/git.md)
