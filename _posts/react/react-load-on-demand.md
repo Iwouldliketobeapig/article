@@ -8,7 +8,7 @@ categories:
 ---
 ![](/imgs/react/theme/load.jpg)
 
-## CommonJS与import()
+## 原理：CommonJS与import()
 ### 方法一：CommonJS模块语法
 **利用require.ensure,require.ensure()是webpack特有的，已经被import()取代。**
 
@@ -62,28 +62,29 @@ class App extends Component {
 export default App;
 ```
 ## react-router中使用按需加载
+
+[demo地址](https://github.com/Iwouldliketobeapig/react-router-async)，此处配合create-react-app使用，自己配置webpack合理需要配置[output.fileName](https://webpack.docschina.org/configuration/output/#output-fileName)和[output.chunkFilename](https://webpack.docschina.org/configuration/output/#output-chunkfilename)
+
 ### 方法一：使用react.lazy
 
 ```jsx
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 
-const Home = lazy(() => import('./routes/Home'));
-const About = lazy(() => import('./routes/About'));
+const Program1 = lazy(() => import('./Program1'));
 
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/about" component={About}/>
+        <Route path="/program1" component={Program1}/>
       </Switch>
     </Suspense>
   </Router>
 );
 ```
+[查看代码](https://github.com/Iwouldliketobeapig/react-router-async/blob/master/src/App.js#L8)
 ### 方法二：利用高阶组件
-
 * 写一个高阶组件用于动态加载组件
 
 ```jsx
@@ -118,26 +119,26 @@ export default function asyncComponent(importComponent) {
   return AsyncComponent;
 }
 ```
+[查看代码](https://github.com/Iwouldliketobeapig/react-router-async/blob/master/src/asyncComponent.js)
 * 引用并使用该高阶组件做按需加载
 
 ```jsx
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import asyncComponent from './asyncComponent';
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 
-const Home = lazy(() => import('./routes/Home'));
-const About = lazy(() => import('./routes/About'));
+const Progran2 = asyncComponent(() => import("./Program2"));
 
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={() => asyncComponent(import('./routes/Home'))}/>
-        <Route path="/about" component={() => asyncComponent(import('./routes/About'))}/>
+        <Route exact path="/program2" component={Program2}/>
       </Switch>
     </Suspense>
   </Router>
 );
 ```
+[查看代码](https://github.com/Iwouldliketobeapig/react-router-async/blob/master/src/App.js#L9)
 
 `以上两种方法都是react官方推荐`[code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
