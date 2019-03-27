@@ -13,10 +13,13 @@ categories:
 1. `git init`: git初始化，并生成.git文件；
 2. `git clone <url(你的项目地址)>`: 克隆项目
   例： git clone git@github.com:Iwouldliketobeapig/hexo-dt.git
-3. `git remote add <origin(源名)> <url(项目地址)>`: 添加远程仓库
+3. **remote**
+  `git remote add <origin(源名)> <url(项目地址)>`: 添加远程仓库
   例： git remote add origin git@github.com:Iwouldliketobeapig/hexo-dt.git
-4. `git remote set-url <origin(源名)> <url(项目地址)>`: 为以为源添加或者修改远程仓库抵制
-5. `git remote -v`: 查看源名及远程仓库地址
+  `git remote set-url <origin(源名)> <url(项目地址)>`: 为以为源添加或者修改远程仓库地址
+  `git remote rename <old> <new>`: 修改源名
+  `git remote remote <name>`: 删除源名及远程仓库地址
+  `git remote -v`: 查看源名及远程仓库地址
 6. `git checkout <name(分支名)>`: 切换分支
   例： git checkout master
 7. `git checkout -b <name(分支名)>`: 创建并切换到创建分支
