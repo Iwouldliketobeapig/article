@@ -6,7 +6,7 @@ tag:
 categories:
   - 前端
 ---
-![](/imgs/react/theme/common.jpeg)
+![](/imgs/react/theme/common.png)
 
 # React Context
 `绝大多数应用程序不需要使用 context.如果你想让你的应用更稳定，别使用context。因为这是一个实验性的API，在未来的React版本中可能会被更改。`
