@@ -11,7 +11,7 @@ categories:
 # React Context
 `绝大多数应用程序不需要使用 context.如果你想让你的应用更稳定，别使用context。因为这是一个实验性的API，在未来的React版本中可能会被更改。`
 
-## 如何使用
+## 一、如何使用
 1. 安装并引入prop-types
 2. 父组件中设置getChildContext()
 ```javascript
@@ -77,7 +77,7 @@ B.contextTypes = {
 }
 ```
 
-## 使用要点
+## 二、使用要点
 1. 如果一个组件中定义了contextTypes,在下面的生命周期会获得额外的参数
 ```javascript
 constructor(props, context);
