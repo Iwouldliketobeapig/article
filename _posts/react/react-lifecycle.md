@@ -9,7 +9,7 @@ categories:
 ![](/imgs/react/theme/life.jpg)
 
 # React生命周期
-![react生命周期](/imgs/react/lifecycle/lifecycle.jpg)
+![react生命周期(图有误，待更新)](/imgs/react/lifecycle/lifecycle.jpg)
 
 ## 生命周期
 ### Mounting
@@ -25,7 +25,7 @@ props或state的更改可能导致更新。 重新呈现组件时，将按以下
 * shouldComponentUpdate()
 * render()
 * getSnapShotBeforeUpdate()
-* componentDidMount()
+* componentDidUpdate()
 
 ### Unmounting
 从DOM中移除组件时调用此方法

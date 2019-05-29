@@ -44,3 +44,22 @@ categories:
 **只要传入参数相同，返回计算得到的下一个 state 就一定相同。没有特殊情况、没有副作用，没有 API 请求、没有变量修改，单纯执行计算**
 
 ### 基本接口
+#### Top-Level Exports
+1. createStore: 创建一个store
+2. applyMiddleware: 添加中间件
+3. combinReducers: 组合reducuer
+4. compose: 从左到右组合功能
+5. bindActionCreators: 需要学习一下
+#### store api
+1. dispatch: 发布action
+2. getState: 获取state
+3. subscribe: 监听者
+
+
+## react-redux
+
+### 接口
+1. Provider
+```javascript
+
+```
