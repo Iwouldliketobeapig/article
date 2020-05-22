@@ -42,7 +42,7 @@ function A (a, b) {
 A(1, 2) // 3
 const a = new A(1, 2); // A {a: 1, b: 2}
 ```
-## 怎么手写一个请求
+## 怎么手写一个ajax请求
 1. 不考虑兼容ie低版本，新建一个XMLHttpRequest实例
 ```javascript
 const xhr = new XMLHTTPRequest();
