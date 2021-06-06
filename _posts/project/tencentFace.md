@@ -61,6 +61,7 @@ xhr.send(null); // send接收一个参数，参数为要发送的数据，如果
 const xhr = new XMLHTTPRequest();
 xhr.open('get', 'example.com', false);
 xhr.send(null);
+console.log(xhr);
 ```
 ## visiblety: false和display: none的区别
 1. `visibility: hidden`: 元素不显示但是要占用空间
